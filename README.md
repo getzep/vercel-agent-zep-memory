@@ -1,5 +1,11 @@
 # Vercel AI + Zep Integration Guide
 
+To quickly set up the project, you can create a new Next.js app using the following command:
+
+```bash
+pnpm create next-app@latest vercel-zep-memory --example "https://github.com/getzep/vercel-agent-zep-memory"
+```
+
 This guide demonstrates how to integrate Zep with the Vercel AI SDK to build an intelligent chatbot with memory capabilities.
 We'll walk through setting up a Next.js project that uses Zep to store conversation history and contextual data about users.
 
@@ -9,7 +15,7 @@ The guide is available [here](https://help.getzep.com/docs/ecosystem/vercel-ai).
 
 You can deploy this project to Vercel with a single click:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/getzep/vercel-agent-zep-memory&env=ZEP_API_KEY,OPENAI_API_KEY)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A//github.com/getzep/vercel-agent-zep-memory&env=ZEP_API_KEY,OPENAI_API_KEY)
 
 ## Setup
 
@@ -53,13 +59,13 @@ To start the development server:
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the chat interface.
+Open [http://localhost:3000/{userId}](http://localhost:3000/{userId}) with your browser to see the chat interface, replacing `{userId}` with the actual user ID you saved from the seed output.
 
 ## Project Structure
 
 The main components of this project are:
 
-- `app/page.tsx`: The chat interface component
+- `app/[userId]/page.tsx`: The chat interface component, now using `userId` as a path parameter
 - `app/api/chat/route.ts`: The route handler for chat functionality
 - Various utility functions for working with Zep's memory and knowledge graph capabilities
 

@@ -4,9 +4,12 @@ import { useChat } from "ai/react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { useParams } from "next/navigation";
 
 export default function Chat() {
   const [sessionId, setSessionId] = useState<string>("");
+  const params = useParams();
+  const userId = params.userId as string;
 
   useEffect(() => {
     setSessionId(uuidv4());
@@ -15,10 +18,10 @@ export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat({
     body: {
       sessionId,
-      userId: "<user_id>",
+      userId: userId,
     },
   });
-  if (!sessionId) return null;
+
   return (
     <div className="flex flex-col w-full max-w-md py-24 mx-auto stretch">
       {messages.map((m) => (

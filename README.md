@@ -5,6 +5,12 @@ We'll walk through setting up a Next.js project that uses Zep to store conversat
 
 The guide is available [here](https://help.getzep.com/docs/ecosystem/vercel-ai).
 
+## Deploy with Vercel
+
+You can deploy this project to Vercel with a single click:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/getzep/vercel-agent-zep-memory&env=ZEP_API_KEY,OPENAI_API_KEY)
+
 ## Setup
 
 1. Create a `.env.local` file in your project root with your API keys:

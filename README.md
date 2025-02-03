@@ -65,7 +65,7 @@ Open [http://localhost:3000/{userId}](http://localhost:3000/{userId}) with your 
 
 The main components of this project are:
 
-- `app/[userId]/page.tsx`: The chat interface component, now using `userId` as a path parameter
+- `app/[userId]/page.tsx`: The chat interface component, using `userId` as a path parameter
 - `app/api/chat/route.ts`: The route handler for chat functionality
 - Various utility functions for working with Zep's memory and knowledge graph capabilities
 

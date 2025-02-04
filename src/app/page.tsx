@@ -5,6 +5,8 @@ export default function HomePage() {
         <p>
           Welcome to Vercel AI + Zep Memory starter application! To start
           chatting, please navigate to <strong>/userId</strong> in the URL path.
+          (<strong>userId</strong> is a variable corresponding to your Zep User
+          ID).
         </p>
       </div>
     </div>

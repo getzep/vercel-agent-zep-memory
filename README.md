@@ -3,7 +3,7 @@
 To quickly set up the project, you can create a new Next.js app using the following command:
 
 ```bash
-pnpm create next-app@latest vercel-zep-memory --example "https://github.com/getzep/vercel-agent-zep-memory"
+pnpm create next-app@latest my-agent-project --example vercel-zep-memory
 ```
 
 This guide demonstrates how to integrate Zep with the Vercel AI SDK to build an intelligent chatbot with memory capabilities.
